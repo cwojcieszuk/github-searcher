@@ -1,0 +1,29 @@
+<app-search-bar (usernameSearch)="onUsernameSearch($event)"></app-search-bar>
+
+<div class="card" *ngIf="user$ | async as user">
+  <div class="card-profile">
+    <img [src]="user.avatar_url" alt="avatar-img">
+  </div>
+  <div class="card-content">
+    <div class="card-content-header">
+      <div>
+        <h1>{{user.name}}</h1>
+        <a [href]="user.html_url">@{{user.login}}</a>
+      </div>
+      <span>Joined {{user.created_at | date}}</span>
+    </div>
+    <p class="card-content-bio">{{user.bio == null ? 'This profile has no bio' : user.bio}}</p>
+    <div class="card-content-git-info">
+      <app-info-item title="Repos">{{user.public_repos}}</app-info-item>
+      <app-info-item title="Followers">{{user.followers}}</app-info-item>
+      <app-info-item title="Following">{{user.following}}</app-info-item>
+    </div>
+    <div class="card-content-profile-info">
+      <app-profile-item iconName="location_on" [className]="user.location == null ? 'dark' : ''">{{user.location == null ? 'Not available' : user.location}}</app-profile-item>
+      <app-profile-item iconName="email" [className]="user.email == null ? 'dark' : ''">{{user.email == null ? 'Not available' : user.email}}</app-profile-item>
+      <app-profile-item iconName="share" [className]="user.blog.length === 0 ? 'dark' : ''">{{user.blog.length === 0 ? 'Not available' : user.blog}}</app-profile-item>
+      <app-profile-item iconName="location_city" [className]="user.company == null ? 'dark' : ''">{{user.company == null ? 'Not available' : user.company}}</app-profile-item>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,25 @@
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info > span {
+  color: rgb(124,132,148);
+  font-weight: 400;
+}
+
+:host ::ng-deep {
+  font-weight: bold;
+  color: rgba(215,218,225,255);
+}
+
+@media screen and (max-width: 500px) {
+  .info > span {
+    font-size: 12px;
+  }
+
+  :host ::ng-deep {
+    font-size: 10px;
+    text-align: center;
+  }
+}

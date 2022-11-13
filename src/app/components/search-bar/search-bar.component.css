@@ -1,0 +1,29 @@
+input {
+  padding: 1rem;
+  border-radius: .5rem;
+  border: none;
+  outline: none;
+  background: rgba(31,42,71,255);
+  color: rgba(254,254,254,255);
+  position: relative;
+  width: 100%;
+}
+
+button {
+  border: none;
+  outline: none;
+  color: rgba(254,254,254,255);
+  background: rgb(21,124,234);
+  padding: .7rem;
+  margin-right: .3rem;
+  border-radius: .5rem;
+  position: absolute;
+  cursor: pointer;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-block: 1rem;
+}

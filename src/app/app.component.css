@@ -1,0 +1,27 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  flex-basis: 60%;
+  background: rgba(20,28,47,255);
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.content-header > span {
+  font-weight: bold;
+}
+
+app-github-profile {
+  width: 60%;
+}
+
+.title {
+  color: white;
+}
